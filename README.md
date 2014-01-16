@@ -214,7 +214,7 @@ Una excepción a nuestra regla multi-línea sería en el siguiente caso:
     .t80    { width:80% }
     .t90    { width:90% }
 
-En este ejemplo (del [sistema de grids de inuit.css](https://github.com/csswizardry/inuit.css/blob/master/inuit.css/partials/base/_tables.scss#L88)) tiene más sentido dejar nuestro CSS en una sola línea.
+En este ejemplo (del [sistema de grids de inuit.css](https://github.com/csswizardry/inuit.css/blob/master/base/_tables.scss#L96)) tiene más sentido dejar nuestro CSS en una sola línea.
 
 ## Convenciones para los nombres
 Mayormente utilizo clases delimitadas por guiones (Ej: '.foo-bar' y no '.foo_bar' ni '.foobar'), sin embargo, en ciertos casos uso notaciones BEM (Block Element, Modifier - elemento en bloque, modificador).
