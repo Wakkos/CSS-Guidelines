@@ -165,7 +165,7 @@ Como lectura complementaria no podría recomendar lo suficiente el libro de Jona
     }
 
 
-Tengo un gran número de estándares cuando estructuro un conjunto de reglas
+Tengo un gran número de estándares cuando estructuro un conjunto de reglas.
 
 * Usar un guión que delimite los nombres de las clases (excepto para notaciones BEM [ver abajo](#convenciones-para-los-nombres))
 * 4 espacios de indentación.
@@ -214,7 +214,7 @@ Una excepción a nuestra regla multi-línea sería en el siguiente caso:
     .t80    { width:80% }
     .t90    { width:90% }
 
-En este ejemplo (del [sistema de grids de inuit.css](https://github.com/csswizardry/inuit.css/blob/master/inuit.css/partials/base/_tables.scss#L88)) tiene más sentido dejar nuestro CSS en una sola línea.
+En este ejemplo (del [sistema de grids de inuit.css](https://github.com/csswizardry/inuit.css/blob/master/base/_tables.scss#L96)) tiene más sentido dejar nuestro CSS en una sola línea.
 
 ## Convenciones para los nombres
 Mayormente utilizo clases delimitadas por guiones (Ej: '.foo-bar' y no '.foo_bar' ni '.foobar'), sin embargo, en ciertos casos uso notaciones BEM (Block Element, Modifier - elemento en bloque, modificador).
@@ -248,7 +248,7 @@ Entonces, '.page-wrapper' es un selector aislado; no forma parte de una abstracc
 
 BEM se ve un poco feo, y es mucho más verbal, pero nos garantiza   poder espigar las funciones y relaciones de los elementos con sus componentes. BEM a su vez comprime (gzip) muy bien y por ello el repetirlos nos viene bien en documentos comprimidos.
 
-Independientemente que uses BEM o no, siempre asegúrate que las clases son nombradas muy claramente; mantenías tan corto como sea posible pero tan largas como sea necesario. Asegúrate que cualquier objeto o abstracción tienen nombres vagos (Ej: '.ui-list', '.media') para permitir su reutilización siempre que sea posible. Las extensiones de objetos deben ser nombradas mucho más explícitamente (Ej: '.user-avatar-link). No te preocupes por la longitud o cantidad de clases; gzip comprimirá todo el código bien escrito _increíblemente_ bien.
+Independientemente que uses BEM o no, siempre asegúrate que las clases son nombradas muy claramente; mantenlas tan cortas como sea posible pero tan largas como sea necesario. Asegúrate de que ningún objeto o abstracción se nombra de manera vaga (Ej: '.ui-list', '.media') para permitir su reutilización siempre que sea posible. Las extensiones de objetos deben ser nombradas mucho más explícitamente (Ej: '.user-avatar-link). No te preocupes por la longitud o cantidad de clases; gzip comprimirá todo el código bien escrito _increíblemente_ bien.
 
 
 ### Clases en HTML
@@ -257,12 +257,12 @@ Haz las cosas fáciles de leer, separa tus clases en HTML con dos (2) espacios e
 
     <div class="foo--bar  bar__baz">
 
-Este espacio en blanco incrementado permitirá ubicar con mayor facilidad y mejorar la lectura de múltiples clases.
+Este aumento de los espacios en blanco permitirá una mejor localización y lectura de múltiples clases.
 
 ### JS hooks
 
 **Nunca uses una clase de CSS _de estilos_ como un hook de JS.** 
-Adjuntar comportamientos de JS a clases de estilo quiere decir que nunca podremos tener una sin la otra
+Adjuntar comportamientos de JS a clases de estilo quiere decir que nunca podremos tener una sin la otra.
 
 Si necesitas enlazar a alguna etiqueta usa una clase específica de JavaScript,. Simplemente es una clase que empiece por '.JS-' , Ej: '.js-toggle', '.js-drag-and-drop' y de esta manera podemos agregar ambas clases, JS y CSS, a nuestra etiqueta pero nunca se sobrepondrán una a la otra.
 
@@ -313,16 +313,15 @@ Escribe un trozo de código y luego escribe sobre él.
 
 ### Comentarios avanzados
 
-There are a number of more advanced techniques you can employ with regards
-comments, namely:
+Hay una serie de técnicas más avanzadas que puedes emplear en lo que respecta comentarios, a saber:
 
-* Quasi-qualified selectors
-* Tagging code
-* Object/extension pointers
+* Selectores Cuasi-calificados
+* Código de etiquetas
+* Indicadores de Objetos/Extensiones
 
 #### Selectores Cuasi-calificados
 
-Nunca deberías clasificar tu selector, esto es, nunca debemos escribir 'ul.na{}' si podemos tener '.nav{}'. Calificar selectores disminuye el rendimiento del selector, inhibe la posibilidad de rehusar una clase en un elemento diferente y disminuye su adecuación. Estas son cosas que debemos evitar a todo coste.
+Nunca deberías clasificar tu selector, esto es, nunca debemos escribir 'ul.na{}' si podemos tener '.nav{}'. Calificar selectores disminuye el rendimiento del selector, inhibe la posibilidad de rehusar una clase en un elemento diferente y disminuye su adecuación. Estas son cosas que debemos evitar a toda costa.
 
 Sin embargo, a veces es útil comunicar al siguiente desarrollador(es) dónde pretendes usar esa clase. Tomemos '.product-page' por ejemplo; esta clase suena como si debiera ser usada en un contenedor principal, quizás el elemento 'body' o 'html' pero es difícil de decir de verdad dónde se debe usar.
 
